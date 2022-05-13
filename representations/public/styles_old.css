@@ -1,0 +1,145 @@
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255); 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: rgb(255, 255, 255); 
+  font-size: medium;
+}
+
+
+#main_modality_container_div {
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+}
+
+.moveable {
+
+  list-style: none;
+  padding: 0;
+  margin: 0 0%;
+}
+.moveable li {
+  margin: 1px;
+  padding: 15px;
+  border: 1px solid #dfdfdf;
+  background: #333333;
+
+}
+
+/* (B) DRAG-AND-DROP HINT */
+.moveable li.hint {
+  border: 1px solid #dfdfdf;
+  background: #494949;
+}
+
+.moveable li.active {
+  border: 1px solid #dfdfdf;
+  background:  #7c6767;
+}
+
+/* /buttons first page */
+a:link, a:visited {
+  background-color: #009688;
+  color: #fff;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: grey;
+}
+
+.bottom {
+  text-align: center;
+  }
+
+.bottom_container {
+  text-align: center;
+  }
+  
+  /* LAst submit all button */
+.w3-teal, .w3-hover-teal:hover {
+    color: #fff;
+    background-color: #009688;
+    display: inline-block;
+    font-size: 32px;
+    width: 100%;
+  }
+
+  #submit_final_button{
+    background-color: #009688;
+    color: #fff;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    border: 0;
+  }
+
+  #submit_final_button:hover, a:active {
+    background-color: grey;
+  }
+
+  #submit_infopage{
+    background-color: #009688;
+    color: #fff;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    border: 0;
+  }
+
+  #submit_infopage:hover, a:active {
+    background-color: grey;
+  }
+  
+  /* version_5_videos */
+ 
+  .float_container {
+    /* position: absolute; */
+    text-align: center;
+    border: 10px solid white;
+    padding: 10px;
+    margin: 20px;
+   
+  }
+
+  .ATP_double_A {
+    position: relative;
+    float: left;
+    padding: 20px;
+    border: 20px;
+  }
+
+  .ATP_double_B {
+    position: relative;
+    /* float: right; */
+    padding: 20px;
+    border: 20px;
+  }
+
+
+  .ATP_single {
+    text-align: center;
+  }
+
+  .verticalLine {
+    height: 120px;
+    border-right: 10px solid white;
+    position: absolute;
+    right: 50%;
+}
+  
+    

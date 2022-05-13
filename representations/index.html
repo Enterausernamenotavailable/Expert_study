@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Questionnaire</title>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script> 
+    <link href="./public/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="public/myD3app.js" defer></script>
+  </head>
+  
+  <body>
+
+    <div class="beginning">
+        <h1>The Study of Representations: Biological Processes</h1>
+        <p>Dear participant, thank you very much for participating in our study investigating the representations of biological processes.</p>
+           The information from this study will be used as part of a PhD research project by Hana Pokojna. If you have any further questions, please
+           contact her at xpokojna@fi.muni.cz.</p> 
+        <br>
+        <p>The questionnaire consists of six parts. The first part takes place on this page and collects 
+          information about you. The remaining five parts each show one representation of a biological process. You will be asked to view all five
+          of the representations and answer questions related to them and their effectiveness.  
+          We expect the study to last up to 60 minutes. Answering all the questions is mandatory. We recommend to complete
+          this study on a screen with at least 1024 x 768 resolution. Please do not close the windows or reload the pages while taking part in the study.
+	        If you are under 18, please do not take part in this study. 
+        </p>
+     <br>
+     <div class="row_logo">
+        <div  style="float: left; width:50%; max-width:400px;">
+          <img class="img" src="images/masaryk_logo_white.png" alt="MUNI logo">
+         </div>
+         <div style="float: left; width: 50%; max-width:400px;">
+          <img class="img" src="images/logo_visitlab_white.png" alt="Visitlab logo">
+         </div>
+         <div style="clear: left;"></div>
+      </div>          
+      <br>
+
+  
+    <hr>
+
+    <form accept-charset="utf-8">
+    <div class="questionnaire" >
+        <p>1. What is your nationality?</p>
+
+          <input type="text" id="nationality" name="nationality" placeholder="Enter your answer here" required>
+          
+   
+        
+    </div> 
+
+    
+    <hr>
+
+    <div class="questionnaire">
+        <p>2. What is your gender?</p>
+  
+            <input type="radio" id="gender_female" name="gender" value="Female" required>
+            <label for="gender_female">Female</label><br>
+
+            <input type="radio" id="gender_male" name="gender" value="Male" required>
+            <label for="gender_male">Male</label><br>
+
+            <input type="radio" id="gender_nonbinary" name="gender" value="Non-binary" required>
+            <label for="gender_nonbinary">Non-binary</label><br>
+
+            <input type="radio" id="gender_notsaying" name="gender" value="Prefernot_to_say" required>
+            <label for="gender_notsaying">Prefer not to say</label><br>
+
+            <input type="radio" id="gender_selfdescribe" name="gender" value="Selfdescribed" required>
+            <label for="gender_selfdescribe">Prefer to self-identify</label>
+
+            <input type="text11" id="gender_selfdescribe_text" placeholder="Enter your answer here">
+     
+    </div> 
+        
+   <hr>
+   
+   <div class="questionaire">
+    <p>3. How old are you?</p>
+    <input type="number" min="18" id="age" placeholder="Enter your answer here" required>
+    
+   </div> 
+   
+   <hr>
+
+   <div class="questionaire">
+    <p>4. What is your field of study/research/work?</p>
+    <input type="text11" id ="field" placeholder="Enter your answer here" required>
+    
+   </div> 
+    
+   <hr>
+
+   <div class="questionaire">
+    <p>5. Self-describe your level of experience with biology.</p>
+   
+        <input type="radio" id="biology_1" name="biology" value="Not_interested" required>
+        <label for="biology_1">I am not interested in biology (I left the subject behind as soon as I could).</label><br>
+        <input type="radio" id="biology_2" name="biology" value="High_school" required>
+        <label for="biology_2">I have a basic level of understanding (high school).</label><br>
+        <input type="radio" id="biology_3" name="biology" value="Hobby" required>
+        <label for="biology_3">I work on biology-related projects in my free time (hobby).</label><br> 
+        <input type="radio" id="biology_4" name="biology" value="Study" required>
+        <label for="biology_4">I study biology-related subjects (interest).</label><br>
+        <input type="radio" id="biology_5" name="biology" value="Expert" required>
+        <label for="biology_5">I work on biology-related projects as part of my job (expert).</label><br>
+    
+   </div>   
+   
+   <hr>
+
+   <div class="questionaire">
+    <p>6. Self-describe your level of experience with data visualisations.</p>
+   
+    <input type="checkbox" id="vis_1" name="vis_exp" value ="Not_using"/><label for="vis_1">I do not use visualisations.</label>
+    <br>
+    <input type="checkbox" id="vis_2" name="vis_exp" value ="Consumer"/><label for="vis_2">I use illustrations, videos, and diagrams to help me learn.</label>
+    <br>
+    <input type="checkbox" id="vis_3" name="vis_exp" value ="Producer"/><label for="vis_3">I create visual aids (illustrations, videos, diagrams) to explain concepts to my peers.</label>
+    <br>
+   </div>
+
+   <hr>
+   
+   <div class="questionnaire">
+       <p>7. Please take the colour blindness test by clicking the button below. The link will take you to a third-party website in a new tab. 
+         <b>Press the 'Start the Test' button </b> on the website and answer the questions. 
+        After completing the test, you do not have to provide an email, just <b>press the 'No, thanks. Continue to test result' link </b>.
+        Afterward, enter your result from the website in this questionnaire below.</p>
+        <br>
+        <a href="https://eu.enchroma.com/pages/colour-blind-test#multisite-redirected" target="_blank">Online colour blindness test</a>
+        <br>
+        <br>
+        <input type="radio" id="vision_normal" name="vision" value="Normal_vision" required>
+        <label for="vision_normal">Normal color vision</label><br>
+
+        <input type="radio" id="vision_other" name="vision" value="Vision_deficiency" required>
+        <label for="vision_other">Other (please specify)</label>
+        <input type="text11" id="vision_text" size="30" placeholder="Enter your answer here">  
+   </div>
+
+   <hr>
+
+   
+  </form>
+
+   <div class="bottom">
+     <h1>Thank you for completing the first part of the questionnaire with information about yourself. Please continue to the next
+       part of the study by clicking the button below.</h1>
+     <p><input type="button" id="submit_infopage" name="send" onclick="validateForm()" value="Continue to the questionnaire"></p>
+     <br>
+  </div>
+
+</body>

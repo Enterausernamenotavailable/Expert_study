@@ -1,0 +1,556 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Questionnaire</title>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script> 
+    <link href="./public/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="public/myD3app.js" defer></script>
+  </head>
+  
+  <body onload="fillAnswers();">
+
+    
+    <p>This papge contains links to five separate representations. Representations 4 and 5 are videos that 
+      can be watched on this page. Representations 1, 2 and 3 have buttons that that will take you to another page
+      to view the representations in their full size and will allow you to return you back to this page. Underneath the
+      representations is a questionaire concerning the different representations and comparative questions.
+  </p>
+  <br>
+  
+  <h2>Representations</h2>
+
+  <!-- 3 screenshots with buttons nect to each other -->
+  <table>
+    <tr>
+        <th><a href="/version_1.html" target="_blank">Detailed 2D Representation</a></th>
+        <th><a href="/version_2.html" target="_blank">Simple 2D Representation</a></th>
+        <th><a href="/version_5.html" target="_blank">Hybrid Representation</a></th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+  </tr>
+    <tr>
+        <td><img class="img" src="images/detailed 2D.png" alt="illustration"></td>
+        <td><img class="img" src="images/simple 2D.png" alt="illustration"></td>
+        <td><img class="img" src="images/hybrid_sum.PNG" alt="illustration"></td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+
+<!-- 2 videos next to each other -->
+<table>
+  <tr>
+      <th><a href="/version_3.html" target="_blank">No Commentary Representation</a></th>
+      <th><a href="/version_4.html" target="_blank">Commentary Representation</a></th>
+      
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+  <tr>
+      <td><video width="85%" controls style="margin: auto; display:block;">
+        <source src="videos for website/version_3.1.mp4" type="video/mp4"></video></td>
+      <td><video width="85%" controls style="margin: auto; display:block;">
+        <source src="videos for website/version_4.mp4" type="video/mp4"></video></td>
+  </tr>
+</table>
+
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+  
+     
+
+    <div class="instructions_div">
+      <h2>And now, please answer the following questions:</h2> 
+    </div>
+
+  <br>
+    <h3>Preferences</h3>
+<form method="post" action="thanks.php" onsubmit="return validateFormPage2();">    
+<hr>    
+    <div class="question">
+      <p>1. Which modality was the <b>most</b> helpful in understanding the process, and why?</p>
+
+      <input type="radio" id="preference_2D_simple" name="preference" value="2D_simple" required>
+      <label for="preference_2dSimple">2D Simple</label><br>
+
+      <input type="radio" id="preference_2D_detailed" name="preference" value="2D_detailed" required>
+      <label for="preference_2dSimple">2D Detailed</label><br>
+
+      <input type="radio" id="preference_videoNarrated" name="preference" value="video_narrated" required>
+      <label for="preference_videoNarrated">Narrated Video</label><br>
+
+      <input type="radio" id="preference_videoMusic" name="preference" value="video_music" required>
+      <label for="preference_videoMusic">Video with Music</label><br>
+
+      <input type="radio" id="preference_hybrid" name="preference" value="hybrid" required>
+      <label for="preference_hybrid">Hybrid</label>
+      
+      <br>
+      <input id="Q1" name="Q1" type="text1" size="50" placeholder="Why is this modality most helpful?" required>   
+     
+
+    </div>
+<hr>
+    <div class="question">
+      <p>2. Which modality was the <b>least</b> helpful in understanding the process, and why?</p>
+
+      <input type="radio" id="preference_2D_simple" name="preference" value="2D_simple" required>
+      <label for="preference_2dSimple">2D Simple</label><br>
+
+      <input type="radio" id="preference_2D_detailed" name="preference" value="2D_detailed" required>
+      <label for="preference_2dSimple">2D Detailed</label><br>
+
+      <input type="radio" id="preference_videoNarrated" name="preference" value="Video_narrated" required>
+      <label for="preference_videoNarrated">Narrated Video</label><br>
+
+      <input type="radio" id="preference_videoMusic" name="preference" value="Video_music" required>
+      <label for="preference_videoMusic">Video with Music</label><br>
+
+      <input type="radio" id="preference_hybrid" name="preference" value="Hybrid" required>
+      <label for="preference_hybrid">Hybrid</label>
+      
+      <br>
+      <input id="Q2" name="Q2" type="text2" size="50" placeholder="Why is this modality least helpful?" required>
+    </div>
+<hr>
+    <div class="question">
+      <p>3. Choose options that best describe the <b>2D simple</b> modality:</p>
+
+      <input type="checkbox" id="Q3_Simplistic" name="Q3[]" value="Simplistic"/>
+      <label for="Q3_Simplistic">Simplistic</label>
+      <br>
+      <input type="checkbox" id="Q3_Clear" name="Q3[]" value="Clear"/> 
+      <label for="Q3_Clear">Clear</label>
+      <br>
+      <input type="checkbox" id="Q3_Detailed" name="Q3[]" value="Detailed"/> 
+      <label for="Q3_Detailed">Detailed</label>
+      <br>
+      <input type="checkbox" id="Q3_Excessive" name="Q3[]" value="Excessive"/> 
+      <label for="Q3_Excessive">Excessive</label>
+      <br>
+      <input type="checkbox" id="Q3_Informative" name="Q3[]" value="Informative"/> 
+      <label for="Q3_Informative">Informative</label>
+      <br>
+      <input type="checkbox" id="Q3_Confusing" name="Q3[]" value="Confusing"/> 
+      <label for="Q3_Confusing">Confusing</label>
+      <br>
+      <input type="checkbox" id="Q3_Pretty" name="Q3[]" value="Pretty"/> 
+      <label for="Q3_Pretty">Pretty</label>
+      <br>
+      <input type="checkbox" id="Q3_Misleading" name="Q3[]" value="Misleading"/> 
+      <label for="Q3_Misleading">Misleading</label>
+      <br>
+      <input type="checkbox" id="Q3_Distracting" name="Q3[]" value="Distracting"/> 
+      <label for="Q3_Distracting">Distracting</label>
+      <br>
+      <input type="checkbox" id="Q3_Easy_to_read" name="Q3[]" value="Easy_to_read"/> 
+      <label for="Q3_Easy_to_read">Easy to read</label>
+      <br>
+      <input type="checkbox" id="Q3_Inaccurate" name="Q3[]" value="Inaccurate"/> 
+      <label for="Q3_Inaccurate">Inaccurate</label>
+      <br>
+      <input type="checkbox" id="Q3_Precise" name="Q3[]" value="Precise"/> 
+      <label for="Q3_Precise">Precise</label>
+      <br>
+      <input type="checkbox" id="Q3_Accurate" name="Q3[]" value="Accurate"/> 
+      <label for="Q3_Accurate">Accurate</label>
+      <br>
+      <input type="checkbox" id="Q3_Unappealing" name="Q3[]" value="Unappealing"/> 
+      <label for="Q3_Unappealing">Visually unappealing</label>
+      <br>
+      <input type="checkbox" id="Q3_Other" name="Q3[]" value="Other" onchange="clearOtherField()"/> 
+      <label for="Q3_Other">Other</label>
+      <input type="text6"  id="Q8_Other_textfield" name="Q8_Other_textfield" size="50" placeholder="Please specify here">
+    </div>
+
+<br>
+<br>
+      <div class="question">
+        <p>4. Is there something you would change in the representation to show the process in a more 
+          understandable way?</p>
+        <input type="text4" id="Q4" name="Q4" size="200" placeholder="Enter your answer here" required>
+      </div>
+
+<hr>
+<div class="question">
+  <p>5. Choose options that best describe the <b>2D detailed modality</b>:</p>
+
+  <input type="checkbox" id="Q5_Simplistic" name="Q5[]" value="Simplistic"/>
+  <label for="Q5_Simplistic">Simplistic</label>
+  <br>
+  <input type="checkbox" id="Q5_Clear" name="Q5[]" value="Clear"/> 
+  <label for="Q5_Clear">Clear</label>
+  <br>
+  <input type="checkbox" id="5_Detailed" name="Q5[]" value="Detailed"/> 
+  <label for="Q5_Detailed">Detailed</label>
+  <br>
+  <input type="checkbox" id="Q5_Excessive" name="Q5[]" value="Excessive"/> 
+  <label for="Q5_Excessive">Excessive</label>
+  <br>
+  <input type="checkbox" id="Q5_Informative" name="Q5[]" value="Informative"/> 
+  <label for="Q5_Informative">Informative</label>
+  <br>
+  <input type="checkbox" id="Q5_Confusing" name="Q5[]" value="Confusing"/> 
+  <label for="Q5_Confusing">Confusing</label>
+  <br>
+  <input type="checkbox" id="Q5_Pretty" name="Q5[]" value="Pretty"/> 
+  <label for="Q5_Pretty">Pretty</label>
+  <br>
+  <input type="checkbox" id="Q5_Misleading" name="Q5[]" value="Misleading"/> 
+  <label for="Q5_Misleading">Misleading</label>
+  <br>
+  <input type="checkbox" id="Q5_Distracting" name="Q5[]" value="Distracting"/> 
+  <label for="Q5_Distracting">Distracting</label>
+  <br>
+  <input type="checkbox" id="Q5_Easy_to_read" name="Q5[]" value="Easy_to_read"/> 
+  <label for="Q5_Easy_to_read">Easy to read</label>
+  <br>
+  <input type="checkbox" id="Q5_Inaccurate" name="Q5[]" value="Inaccurate"/> 
+  <label for="Q5_Inaccurate">Inaccurate</label>
+  <br>
+  <input type="checkbox" id="Q5_Precise" name="Q5[]" value="Precise"/> 
+  <label for="Q5_Precise">Precise</label>
+  <br>
+  <input type="checkbox" id="Q5_Accurate" name="Q5[]" value="Accurate"/> 
+  <label for="Q5_Accurate">Accurate</label>
+  <br>
+  <input type="checkbox" id="Q5_Unappealing" name="Q5[]" value="Unappealing"/> 
+  <label for="Q5_Unappealing">Visually unappealing</label>
+  <br>
+  <input type="checkbox" id="Q5_Other" name="Q5[]" value="Other" onchange="clearOtherField()"/> 
+  <label for="Q5_Other">Other</label>
+  <input type="text6"  id="Q8_Other_textfield" name="Q5_Other_textfield" size="50" placeholder="Please specify here">
+</div>
+
+<br>
+<br>
+
+  <div class="question">
+    <p>6. Is there something you would change in the representation to show the process in a more 
+      understandable way?</p>
+    <input type="text6" id="Q6" name="Q6" size="200" placeholder="Enter your answer here" required>
+  </div>
+
+<hr>
+
+<div class="question">
+  <p>7. Choose options that best describe the <b>hybrid</b> modality:</p>
+
+  <input type="checkbox" id="Q7_Simplistic" name="Q7[]" value="Simplistic"/>
+  <label for="Q7_Simplistic">Simplistic</label>
+  <br>
+  <input type="checkbox" id="Q7_Clear" name="Q7[]" value="Clear"/> 
+  <label for="Q7_Clear">Clear</label>
+  <br>
+  <input type="checkbox" id="Q7_Detailed" name="Q7[]" value="Detailed"/> 
+  <label for="Q7_Detailed">Detailed</label>
+  <br>
+  <input type="checkbox" id="Q7_Excessive" name="Q7[]" value="Excessive"/> 
+  <label for="Q7_Excessive">Excessive</label>
+  <br>
+  <input type="checkbox" id="Q7_Informative" name="Q7[]" value="Informative"/> 
+  <label for="Q7_Informative">Informative</label>
+  <br>
+  <input type="checkbox" id="Q7_Confusing" name="Q7[]" value="Confusing"/> 
+  <label for="Q7_Confusing">Confusing</label>
+  <br>
+  <input type="checkbox" id="Q7_Pretty" name="Q7[]" value="Pretty"/> 
+  <label for="Q7_Pretty">Pretty</label>
+  <br>
+  <input type="checkbox" id="Q7_Misleading" name="Q7[]" value="Misleading"/> 
+  <label for="Q7_Misleading">Misleading</label>
+  <br>
+  <input type="checkbox" id="Q7_Distracting" name="Q7[]" value="Distracting"/> 
+  <label for="Q7_Distracting">Distracting</label>
+  <br>
+  <input type="checkbox" id="Q7_Easy_to_read" name="Q7[]" value="Easy_to_read"/> 
+  <label for="Q7_Easy_to_read">Easy to read</label>
+  <br>
+  <input type="checkbox" id="Q7_Inaccurate" name="Q7[]" value="Inaccurate"/> 
+  <label for="Q7_Inaccurate">Inaccurate</label>
+  <br>
+  <input type="checkbox" id="Q7_Precise" name="Q7[]" value="Precise"/> 
+  <label for="Q7_Precise">Precise</label>
+  <br>
+  <input type="checkbox" id="Q7_Accurate" name="Q7[]" value="Accurate"/> 
+  <label for="Q7_Accurate">Accurate</label>
+  <br>
+  <input type="checkbox" id="Q7_Unappealing" name="Q7[]" value="Unappealing"/> 
+  <label for="Q7_Unappealing">Visually unappealing</label>
+  <br>
+  <input type="checkbox" id="Q7_Other" name="Q7[]" value="Other" onchange="clearOtherField()"/> 
+  <label for="Q7_Other">Other</label>
+  <input type="text7"  id="Q7_Other_textfield" name="Q7_Other_textfield" size="50" placeholder="Please specify here">
+</div>
+
+<br>
+<br>
+
+  <div class="question">
+    <p>8. Is there something you would change in the representation to show the process in a more 
+      understandable way?</p>
+    <input type="text8" id="Q8" name="Q8" size="200" placeholder="Enter your answer here" required>
+  </div>
+
+<hr>
+
+  <div class="question">
+    <p>9. Choose options that best describe the <b>narrated video</b> modality:</p>
+  
+    <input type="checkbox" id="Q9_Simplistic" name="Q9[]" value="Simplistic"/>
+    <label for="Q9_Simplistic">Simplistic</label>
+    <br>
+    <input type="checkbox" id="Q9_Clear" name="Q9[]" value="Clear"/> 
+    <label for="Q9_Clear">Clear</label>
+    <br>
+    <input type="checkbox" id="Q9_Detailed" name="Q9[]" value="Detailed"/> 
+    <label for="Q9_Detailed">Detailed</label>
+    <br>
+    <input type="checkbox" id="Q9_Excessive" name="Q9[]" value="Excessive"/> 
+    <label for="Q9_Excessive">Excessive</label>
+    <br>
+    <input type="checkbox" id="Q9_Informative" name="Q9[]" value="Informative"/> 
+    <label for="Q9_Informative">Informative</label>
+    <br>
+    <input type="checkbox" id="Q9_Confusing" name="Q9[]" value="Confusing"/> 
+    <label for="Q9_Confusing">Confusing</label>
+    <br>
+    <input type="checkbox" id="Q9_Pretty" name="Q9[]" value="Pretty"/> 
+    <label for="Q9_Pretty">Pretty</label>
+    <br>
+    <input type="checkbox" id="Q9_Misleading" name="Q9[]" value="Misleading"/> 
+    <label for="Q9_Misleading">Misleading</label>
+    <br>
+    <input type="checkbox" id="Q9_Distracting" name="Q9[]" value="Distracting"/> 
+    <label for="Q9_Distracting">Distracting</label>
+    <br>
+    <input type="checkbox" id="Q9_Easy_to_read" name="Q9[]" value="Easy_to_read"/> 
+    <label for="Q9_Easy_to_read">Easy to read</label>
+    <br>
+    <input type="checkbox" id="Q9_Inaccurate" name="Q9[]" value="Inaccurate"/> 
+    <label for="Q9_Inaccurate">Inaccurate</label>
+    <br>
+    <input type="checkbox" id="Q9_Precise" name="Q9[]" value="Precise"/> 
+    <label for="Q9_Precise">Precise</label>
+    <br>
+    <input type="checkbox" id="Q9_Accurate" name="Q9[]" value="Accurate"/> 
+    <label for="Q9_Accurate">Accurate</label>
+    <br>
+    <input type="checkbox" id="Q9_Unappealing" name="Q9[]" value="Unappealing"/> 
+    <label for="Q9_Unappealing">Visually unappealing</label>
+    <br>
+    <input type="checkbox" id="Q9_Other" name="Q9[]" value="Other" onchange="clearOtherField()"/> 
+    <label for="Q9_Other">Other</label>
+    <input type="text9"  id="Q9_Other_textfield" name="Q9_Other_textfield" size="50" placeholder="Please specify here">
+  </div>
+  
+<br>
+<br>
+    <div class="question">
+      <p>10. Is there something you would change in the representation to show the process in a more 
+        understandable way?</p>
+      <input type="text10" id="Q10" name="Q10" size="200" placeholder="Enter your answer here" required>
+    </div>
+
+  <hr>
+
+  <div class="question">
+    <p>11. Choose options that best describe the <b>video without narration</b> modality:</p>
+  
+    <input type="checkbox" id="Q11_Simplistic" name="Q1[]" value="Simplistic"/>
+    <label for="Q11_Simplistic">Simplistic</label>
+    <br>
+    <input type="checkbox" id="Q11_Clear" name="Q11[]" value="Clear"/> 
+    <label for="Q11_Clear">Clear</label>
+    <br>
+    <input type="checkbox" id="Q11_Detailed" name="Q11[]" value="Detailed"/> 
+    <label for="Q11_Detailed">Detailed</label>
+    <br>
+    <input type="checkbox" id="Q11_Excessive" name="Q11[]" value="Excessive"/> 
+    <label for="Q11_Excessive">Excessive</label>
+    <br>
+    <input type="checkbox" id="Q11_Informative" name="Q11[]" value="Informative"/> 
+    <label for="Q11_Informative">Informative</label>
+    <br>
+    <input type="checkbox" id="Q11_Confusing" name="Q11[]" value="Confusing"/> 
+    <label for="Q11_Confusing">Confusing</label>
+    <br>
+    <input type="checkbox" id="Q11_Pretty" name="Q11[]" value="Pretty"/> 
+    <label for="Q11_Pretty">Pretty</label>
+    <br>
+    <input type="checkbox" id="Q11_Misleading" name="Q11[]" value="Misleading"/> 
+    <label for="Q11_Misleading">Misleading</label>
+    <br>
+    <input type="checkbox" id="Q11_Distracting" name="Q11[]" value="Distracting"/> 
+    <label for="Q11_Distracting">Distracting</label>
+    <br>
+    <input type="checkbox" id="Q11_Easy_to_read" name="Q11[]" value="Easy_to_read"/> 
+    <label for="Q11_Easy_to_read">Easy to read</label>
+    <br>
+    <input type="checkbox" id="Q11_Inaccurate" name="Q11[]" value="Inaccurate"/> 
+    <label for="Q11_Inaccurate">Inaccurate</label>
+    <br>
+    <input type="checkbox" id="Q11_Precise" name="Q11[]" value="Precise"/> 
+    <label for="Q11_Precise">Precise</label>
+    <br>
+    <input type="checkbox" id="Q11_Accurate" name="Q11[]" value="Accurate"/> 
+    <label for="Q11_Accurate">Accurate</label>
+    <br>
+    <input type="checkbox" id="Q11_Unappealing" name="Q11[]" value="Unappealing"/> 
+    <label for="Q11_Unappealing">Visually unappealing</label>
+    <br>
+    <input type="checkbox" id="Q11_Other" name="Q11[]" value="Other" onchange="clearOtherField()"/> 
+    <label for="Q11_Other">Other</label>
+    <input type="text11"  id="Q11_Other_textfield" name="Q11_Other_textfield" size="50" placeholder="Please specify here">
+  </div>
+  
+ <br>
+ <br>
+
+    <div class="question">
+      <p>12. Is there something you would change in the representation to show the process in a more 
+        understandable way?</p>
+      <input type="text12" id="Q12" name="Q12" size="200" placeholder="Enter your answer here" required>
+    </div>
+  <hr>
+<br>
+<br>
+
+<h3>Movement and sequential data</h3>
+<div class="question">
+  <p>13. Which modality was the most helpful in understanding the <b>movement of molecules and enzyme</b>?</p>
+
+  <input type="radio" id="preference_2D_simple" name="preference" value="2D_simple" required>
+  <label for="preference_2dSimple">2D Simple</label><br>
+
+  <input type="radio" id="preference_2D_detailed" name="preference" value="2D_detailed" required>
+  <label for="preference_2dSimple">2D Detailed</label><br>
+
+  <input type="radio" id="preference_videoNarrated" name="preference" value="video_narrated" required>
+  <label for="preference_videoNarrated">Narrated Video</label><br>
+
+  <input type="radio" id="preference_videoMusic" name="preference" value="video_music" required>
+  <label for="preference_videoMusic">Video with Music</label><br>
+
+  <input type="radio" id="preference_hybrid" name="preference" value="hybrid" required>
+  <label for="preference_hybrid">Hybrid</label>
+</div>
+
+<br>
+<br>
+
+<div class="question">
+  <p>14. Based on your previous answer, what helped you understand the movement of the molecules??</p>
+  <input type="text14" id="Q14" name="Q14" size="200" placeholder="Enter your answer here" required>
+</div>
+
+<hr>
+
+<div class="question">
+  <p>15. Which modality was the most helpful in understanding the <b>sequence of events</b> in the process of ATP synthesis?</p>
+
+  <input type="radio" id="preference_2D_simple" name="preference" value="2D_simple" required>
+  <label for="preference_2dSimple">2D Simple</label><br>
+
+  <input type="radio" id="preference_2D_detailed" name="preference" value="2D_detailed" required>
+  <label for="preference_2dSimple">2D Detailed</label><br>
+
+  <input type="radio" id="preference_videoNarrated" name="preference" value="video_narrated" required>
+  <label for="preference_videoNarrated">Narrated Video</label><br>
+
+  <input type="radio" id="preference_videoMusic" name="preference" value="video_music" required>
+  <label for="preference_videoMusic">Video with Music</label><br>
+
+  <input type="radio" id="preference_hybrid" name="preference" value="hybrid" required>
+  <label for="preference_hybrid">Hybrid</label>
+</div>
+
+<br>
+<br>
+
+  <div class="question">
+    <p>16. Based on your previous answer, what helped you understand the sequence of events in the 
+      ATP synthesis process?</p>
+    <input type="text14" id="Q14" name="Q14" size="200" placeholder="Enter your answer here" required>
+  </div>
+
+<hr>
+
+
+<h3>Learning and comparisons</h3>
+
+<div class="question">
+  <p>17. For understanding the process, is it more helpful to see the entire process in a single picture 
+    or in a continuous video? And why?</p>
+  <input type="text17" id="Q17" name="Q17" size="200" placeholder="Enter your answer here" required>
+</div>
+
+ <hr>
+
+ <div class="question">
+  <p>18. Is the 2D abstracted modality sufficient for correct understanding of the process? Or do you 
+    prefer the more detailed 2D representation?</p>
+  <input type="text18" id="Q18" name="Q18" size="200" placeholder="Enter your answer here" required>
+</div>
+
+<hr>
+
+ <div class="question">
+  <p>19. Are the 3D models in the hybrid and 3D animation modalities helpful in understanding the 
+    movement and spatial relationships? Or are the 2D representations sufficient?</p>
+  <input type="text19" id="Q19" name="Q19" size="200" placeholder="Enter your answer here" required>
+</div>
+
+<hr>
+
+ <div class="question">
+  <p>20. In the animated modalities, do you prefer to see the process as a continuous animation or 
+    do you prefer the hybrid modality, where you can watch each step of the process 
+    separately?</p>
+  <input type="text20" id="Q20" name="Q20" size="200" placeholder="Enter your answer here" required>
+</div>
+
+
+<hr>
+    <div class="question">
+      <p>21. Please leave any other comments about the representations here:</p>
+      <input type="text12" id="Q21" name="Q21" size="200" placeholder="Enter your answer here">
+    </div>
+
+<hr>
+<input type="text" id="previous_answers" name="previous_answers" value="" hidden>
+<br>
+<div class="bottom">
+<input class="final_button"  id="submit_final_button" type="submit" name="submit" value="Submit all" onclick="clearCustomValidators()">
+</div>
+
+
+    <div class="bottom_container">
+      <p>Thank you very much for your participation. If you have any questions or would be 
+        interested in the results of the study, please get in touch with Hana Pokojna <b>(xpokojna@fi.muni.cz)</b></p>
+    </div>
+
+    </form>
+
+  </body>
+</html>

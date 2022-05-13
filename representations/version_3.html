@@ -1,0 +1,227 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Questionnaire</title>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script> 
+    <link href="./public/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="public/myD3app.js" defer></script>
+  </head>
+  
+  <body onload="fillAnswers();">
+
+    <div class="top_container_div">
+      <h1>Please carefully look at the representation and study the following biological process. 
+          <br> Make sure that the sound on your device is turned on.</h1>
+        <h2>You will be asked questions about the mechanism of ATP synthesis later on in the study.</h2>
+
+        <p>The video 'Synthesis of ATP' used in this study is an animation made by Drew Berry.</p>
+       <br>
+      <div id="main_modality_container_div">
+        <video width="85%" controls style="margin: auto; display:block;">
+          <source src="videos for website/version_3.1.mp4" type="video/mp4"></video> 
+      </div>
+    </div>
+
+    <div class="instructions_div">
+      <h2>And now, please answer the following questions:</h2> 
+    </div>
+
+<form method="post" action="thanks.php" onsubmit="return validateFormPage2();">    
+<hr>    
+    <div class="question">
+      <p>1. In which part of the enzyme do the molecules fuse into ATP?</p>
+      <input id="Q1" name="Q1" type="text1" size="50" placeholder="Enter your answer here" required>
+    </div>
+<hr>
+    <div class="question">
+      <p>2. Which two molecules react to form the ATP molecule?</p>
+      <input id="Q2" name="Q2" type="text2" size="50" placeholder="Enter your answer here" required>
+    </div>
+<hr>
+    <div class="question">
+      <p>3. Which part of the cell does the ATP synthesis occur in?</p>
+      <input id="Q3" name="Q3" type="text3" size="50" placeholder="Enter your answer here" required> 
+    </div>
+<hr>
+    <div class="question">
+      <p>4. What role do the H+ molecules play in ATP synthesis?</p>
+      <input id="Q4" name="Q4" type="text4" size="50" placeholder="Enter your answer here" required>
+    </div>
+<hr>
+    <div class="question">
+      <p>5. How do the H+ molecules cross the membrane?</p>
+      <input id="Q5" name="Q5" type="text5" size="50" placeholder="Enter your answer here" required>
+    </div>
+<hr>
+    <div class="question">
+      <p>6. Which side of the membrane does the ATP synthesis reaction occur?</p>
+      <input id="Q6" name="Q6" type="text6" size="50" placeholder="Enter your answer here:" required> 
+    </div>
+<hr>
+    <div class="question">
+      <p>7. Put the following steps of the ATP synthesis process in the correct order by dragging and dropping.</p>
+      
+      <table cellspacing="30">  
+              <tr>
+                <td><ul class="no-bullets">
+                  <li>Step 1:</li>
+                  <br>
+                  <br>
+                  
+                  <li>Step 2:</li>
+                  <br>
+                  <br>
+                  
+                  <li>Step 3:</li>
+                  <br>
+                  <br>
+                  
+                  <li>Step 4:</li>
+                </ul></td>
+                <td>  <ul id="items-list" class="moveable">
+                  <li class="question7item">ATP release</li>
+                  <li class="question7item">H+ motor activation</li>
+                  <li class="question7item">ADP and PO<sub>4</sub> reaction</li>
+                  <li class="question7item">H+ crossing membrane</li>
+              </ul>
+            </td>
+              </tr>   
+      </table>
+      <input type="text" id="Q7" name="Q7" value="ATP release, H+ motor activation, ADP and PO4 reaction, H+ crossing membrane" hidden>
+    </div>
+
+<hr>
+    <div class="question">
+      <p>8. Choose the options that best describe the representation of the ATP synthesis process. You can choose several options:</p>
+      
+      <input type="checkbox" id="Q8_Simplistic" name="Q8[]" value="Simplistic"/>
+      <label for="Q8_Simplistic">Simplistic</label>
+      <br>
+      <input type="checkbox" id="Q8_Clear" name="Q8[]" value="Clear"/> 
+      <label for="Q8_Clear">Clear</label>
+      <br>
+      <input type="checkbox" id="Q8_Detailed" name="Q8[]" value="Detailed"/> 
+      <label for="Q8_Detailed">Detailed</label>
+      <br>
+      <input type="checkbox" id="Q8_Excessive" name="Q8[]" value="Excessive"/> 
+      <label for="Q8_Excessive">Excessive</label>
+      <br>
+      <input type="checkbox" id="Q8_Informative" name="Q8[]" value="Informative"/> 
+      <label for="Q8_Informative">Informative</label>
+      <br>
+      <input type="checkbox" id="Q8_Confusing" name="Q8[]" value="Confusing"/> 
+      <label for="Q8_Confusing">Confusing</label>
+      <br>
+      <input type="checkbox" id="Q8_Pretty" name="Q8[]" value="Pretty"/> 
+      <label for="Q8_Pretty">Pretty</label>
+      <br>
+      <input type="checkbox" id="Q8_Misleading" name="Q8[]" value="Misleading"/> 
+      <label for="Q8_Misleading">Misleading</label>
+      <br>
+      <input type="checkbox" id="Q8_Distracting" name="Q8[]" value="Distracting"/> 
+      <label for="Q8_Distracting">Distracting</label>
+      <br>
+      <input type="checkbox" id="Q8_Easy_to_read" name="Q8[]" value="Easy_to_read"/> 
+      <label for="Q8_Easy_to_read">Easy to read</label>
+      <br>
+      <input type="checkbox" id="Q8_Inaccurate" name="Q8[]" value="Inaccurate"/> 
+      <label for="Q8_Inaccurate">Inaccurate</label>
+      <br>
+      <input type="checkbox" id="Q8_Precise" name="Q8[]" value="Precise"/> 
+      <label for="Q8_Precise">Precise</label>
+      <br>
+      <input type="checkbox" id="Q8_Accurate" name="Q8[]" value="Accurate"/> 
+      <label for="Q8_Accurate">Accurate</label>
+      <br>
+      <input type="checkbox" id="Q8_Unappealing" name="Q8[]" value="Unappealing"/> 
+      <label for="Q8_Unappealing">Visually unappealing</label>
+      <br>
+      <input type="checkbox" id="Q8_Other" name="Q8[]" value="Other" onchange="clearOtherField()"/> 
+      <label for="Q8_Other">Other</label>
+
+      <input type="text6"  id="Q8_Other_textfield" name="Q8_Other_textfield" size="50" placeholder="Please specify here">
+    </div>
+<hr>
+    <div class="question">
+      <p>9. In your own words, write at least three things that you liked the most about the representation:</p>
+      <input type="text9" id="Q9" name="Q9" size="200" placeholder="Enter your answer here" required>
+    </div>
+<hr>
+    <div class="question">
+      <p>10. In your own words, write at least three things that you did not like about the representation:</p>
+      <input type="text10" id="Q10" name="Q10" size="200" placeholder="Enter your answer here" required>
+    </div>
+<hr>
+     <div class="question">
+      <p>11. Please indicate on the scale below how well the representation communicated the order of events in the ATP synthesis process. Number 1 
+         indicates that the representation did not communicate the order of events in the process clearly at all, while number 5 
+          indicates that the order of events was communicated very clearly.</p>
+
+       <input type="radio" id="Q11_1" name="Q11" value="1" required> 
+        <label for="1">1: The order of events was not represented clearly at all.</label><br>
+        <input type="radio" id="Q11_2" name="Q11" value="2" required>
+        <label for="2">2</label><br>
+        <input type="radio" id="Q11_3" name="Q11" value="3" required>
+        <label for="3">3</label><br>
+        <input type="radio" id="Q11_4" name="Q11" value="4" required>
+        <label for="4">4</label><br>
+	<input type="radio" id="Q11_5" name="Q11" value="5" required>
+        <label for="5">5: The order of events was represented very clearly.</label>
+
+    </div>
+<hr>
+    <div class="question">
+      <p>12. Please indicate on the scale bellow how well you understood the movements happening withing the ATP synthesis process. Number 1 indicates that you have not
+understood the movements in the ATP synthesis process at all, while number 5 indicates that you understood the movements very well.</p>
+
+
+       <input type="radio" id="Q12_1" name="Q12" value="1" required> 
+        <label for="1">1: I did not understand the movements at all.</label><br>
+        <input type="radio" id="12��_2" name="Q12" value="2" required>
+        <label for="2">2</label><br>
+        <input type="radio" id="Q12_3" name="Q12" value="3" required>
+        <label for="3">3</label><br>
+        <input type="radio" id="Q12_4" name="Q12" value="4" required>
+        <label for="4">4</label><br>
+	<input type="radio" id="Q12_5" name="Q12" value="5" required>
+        <label for="5">5: I understood the movements very well.</label><br>
+    </div>
+<hr>
+    <div class="question">
+      <p>13. How often did you look back at the representation to answer the follow-up questions?</p>
+
+        <input type="radio" id="Never" name="Q13" value="Never" required>
+        <label for="Never">Never</label><br>
+        <input type="radio" id="1-5" name="Q13" value="1-5" required>
+        <label for="1-5">1-5 times</label><br>
+        <input type="radio" id="6-10" name="Q13" value="6-10" required>
+        <label for="6-10">6-10 times</label><br>
+        <input type="radio" id="More" name="Q13" value="More than 10" required>
+        <label for="More">More than ten times</label><br>
+      
+    </div>
+<hr>
+    <div class="question">
+     <p>14. Please leave any other comments about the representation:</p>
+      <input type="text14" id="Q14" name="Q14" size="200" placeholder="Enter your answer here">
+    </div>
+
+<hr>
+<input type="text" id="previous_answers" name="previous_answers" value="" hidden>
+<br>
+<div class="bottom">
+<input class="final_button"  id="submit_final_button" type="submit" name="submit" value="Submit all" onclick="clearCustomValidators()">
+</div>
+
+
+    <div class="bottom_container">
+      <p>Thank you very much for your participation. Please <b>do not discuss</b> the contents of the survey 
+        with other people as it may influence the final results. If you have any questions or would be 
+        interested in the results of the study, please get in touch with Hana Pokojna <b>(xpokojna@fi.muni.cz)</b></p>
+    </div>
+
+    </form>
+
+  </body>
+</html>
