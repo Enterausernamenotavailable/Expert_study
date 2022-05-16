@@ -191,3 +191,13 @@ a:hover, a:active {
    ul.no-bullets {
   list-style-type: none; /* Remove bullets */
   }
+
+
+
+  /* table with 3 pictures */
+  .topTable {
+    margin-left: 20%;
+
+  }.screen {
+    padding-left:30%;
+  }
