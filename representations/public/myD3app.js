@@ -129,35 +129,10 @@ function validateForm() {
   if (filled) {
     
 
-    var pageid = getRandomInt(5);//TODO Change to 5
-    if (sessionStorage.getItem('medvis_study_page_id') !== null) {
-        pageid = parseInt(sessionStorage.getItem('medvis_study_page_id'));
-    }
-
-
-    var nextpage = "";
-    switch (pageid) {
-      case 0:
-        nextpage = "version_1.html";
-        break;
-      case 1:
-        nextpage = "version_2.html";
-        break;
-      case 2:
-        nextpage = "version_3.html";
-        break;
-      case 3:
-        nextpage = "version_4.html";
-        break;
-      case 4:
-        nextpage = "version_5.html";
-        break;
-    }
-
-    answers+= "Form version: " + nextpage + "; ";
+    var nextpage = "versions.html";
+    
 
     sessionStorage.setItem("medvis_study_pg1_answers", answers);
-    sessionStorage.setItem("medvis_study_page_id", pageid);
 
     window.location.href = nextpage;
   }

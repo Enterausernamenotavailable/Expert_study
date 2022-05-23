@@ -11,11 +11,11 @@
   <body onload="fillAnswers();">
 
     
-    <h2>This page contains links to five separate representations. Representations 1, 2 and 3 have buttons that that will take<br>
-       you to another page to view the representations in their full size and will allow you to return you back to this page.<br>
-       Representations 4 and 5 are  videos that can be watched on this page. Underneath the representations is a questionaire<br> 
-       concerning the different representations and comparative questions. Please answer them after viewing all of the<br>
-       representations. Please make sure you have sound on your device turned on.
+    <h2>This page contains button links to five separate representations. Each of the representations have buttons that will open a new tab
+       to allow you to explore each representation in detail. Do not click the 'Reload  this page' button at the top of your browser.After you 
+       have looked at the representation, please go to this current tab to answer questions about each of the representations. 
+       Underneath the representations on this page is a questionaire concerning the different representations and comparative questions about them.
+       Please answer them after viewing all of the representations. Please make sure you have sound on your device turned on.
     </h2>
   <br>
   
@@ -25,9 +25,9 @@
 
   <table class="topTable">
     <tr>
-        <th><a href="detailedRep.html"><h2>Detailed 2D Representation</h2></a></th>
-        <th><a href="simpleRep.html"><h2>Simple 2D Representation</h2></a></th>
-        <th><a href="hybridRep.html"><h2>Hybrid Representation</h2></a></th>
+        <th><a href="detailedRep.html" target="_blank"><h2>Detailed 2D Representation</h2></a></th>
+        <th><a href="simpleRep.html" target="_blank"><h2>Simple 2D Representation</h2></a></th>
+        <th><a href="hybridRep.html" target="_blank"><h2>Hybrid Representation</h2></a></th>
         
 
     </tr>
@@ -63,8 +63,9 @@
 <!-- 2 videos next to each other -->
 <table>
   <tr>
-      <th><h2>No Commentary Representation</h2></th>
-      <th><h2>Commentary Reopresentation</h2></th>
+    <th><a href="videoNoCommentary.html" target="_blank"><h2>No Commentary Representation</h2></a></th>
+    <th><a href="videoCommentary.html" target="_blank"><h2>Commentary Representation</h2></a></th>
+
       
   </tr>
   <tr>
@@ -145,7 +146,7 @@
     </div>
 <hr>
     <div class="question">
-      <p>3. Choose options that best describe the <b>2D simple</b> modality:</p>
+      <p>3. Choose options that best describe the<b><a href="detailedRep.html" target="_blank">2D detailed representation</a></b> modality:</p>
 
       <input type="checkbox" id="Q3_Simplistic" name="Q3[]" value="Simplistic"/>
       <label for="Q3_Simplistic">Simplistic</label>
@@ -196,6 +197,7 @@
 
 <br>
 <br>
+<hr>
       <div class="question">
         <p>4. Is there something you would change in the representation to show the process in a more 
           understandable way?</p>
@@ -204,7 +206,7 @@
 
 <hr>
 <div class="question">
-  <p>5. Choose options that best describe the <b>2D detailed modality</b>:</p>
+  <p>5. Choose options that best describe the <b><a href="simpleRep.html" target="_blank">2D simple representation</a></b> modality:</p>
 
   <input type="checkbox" id="Q5_Simplistic" name="Q5[]" value="Simplistic"/>
   <label for="Q5_Simplistic">Simplistic</label>
@@ -255,7 +257,7 @@
 
 <br>
 <br>
-
+<hr>
   <div class="question">
     <p>6. Is there something you would change in the representation to show the process in a more 
       understandable way?</p>
@@ -265,7 +267,7 @@
 <hr>
 
 <div class="question">
-  <p>7. Choose options that best describe the <b>hybrid</b> modality:</p>
+  <p>7. Choose options that best describe the <b><a href="hybrid.Rep.html" target="_blank">hybrid</a></b> modality:</p>
 
   <input type="checkbox" id="Q7_Simplistic" name="Q7[]" value="Simplistic"/>
   <label for="Q7_Simplistic">Simplistic</label>
@@ -316,7 +318,7 @@
 
 <br>
 <br>
-
+<hr>
   <div class="question">
     <p>8. Is there something you would change in the representation to show the process in a more 
       understandable way?</p>
@@ -326,7 +328,7 @@
 <hr>
 
   <div class="question">
-    <p>9. Choose options that best describe the <b>narrated video</b> modality:</p>
+    <p>9. Choose options that best describe the <b><a href="videoNoCommentary.html" target="_blank">representation without commentary</a></b> modality:</p>
   
     <input type="checkbox" id="Q9_Simplistic" name="Q9[]" value="Simplistic"/>
     <label for="Q9_Simplistic">Simplistic</label>
@@ -377,6 +379,7 @@
   
 <br>
 <br>
+<hr>
     <div class="question">
       <p>10. Is there something you would change in the representation to show the process in a more 
         understandable way?</p>
@@ -386,7 +389,7 @@
   <hr>
 
   <div class="question">
-    <p>11. Choose options that best describe the <b>video without narration</b> modality:</p>
+    <p>11. Choose options that best describe the <b><a href="videoCommentary.html" target="_blank">representation with commentary</a></b> modality:</p>
   
     <input type="checkbox" id="Q11_Simplistic" name="Q1[]" value="Simplistic"/>
     <label for="Q11_Simplistic">Simplistic</label>
@@ -437,7 +440,7 @@
   
  <br>
  <br>
-
+<hr>
     <div class="question">
       <p>12. Is there something you would change in the representation to show the process in a more 
         understandable way?</p>
@@ -469,7 +472,7 @@
 
 <br>
 <br>
-
+<hr>
 <div class="question">
   <p>14. Based on your previous answer, what helped you understand the movement of the molecules??</p>
   <input type="text14" id="Q14" name="Q14" size="200" placeholder="Enter your answer here" required>
@@ -498,7 +501,7 @@
 
 <br>
 <br>
-
+<hr>
   <div class="question">
     <p>16. Based on your previous answer, what helped you understand the sequence of events in the 
       ATP synthesis process?</p>
