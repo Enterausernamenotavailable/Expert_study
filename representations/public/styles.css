@@ -93,6 +93,16 @@ a:hover, a:active {
   background-color: grey;
 }
 
+/* button images */
+.clickImage {
+  color: #fff;
+  padding: 14px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
 .bottom {
   text-align: center;
   }
